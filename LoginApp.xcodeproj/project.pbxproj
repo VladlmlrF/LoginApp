@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A97BDC0287481C000D5D311 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97BDBF287481C000D5D311 /* User.swift */; };
-		1A97BDC22874887500D5D311 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97BDC12874887500D5D311 /* Person.swift */; };
 		1A97BDC428749C1A00D5D311 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97BDC328749C1A00D5D311 /* UserInfoViewController.swift */; };
 		1A97BDC628749C5B00D5D311 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97BDC528749C5B00D5D311 /* MoreInfoViewController.swift */; };
 		1AB5175B286F271900526F25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB5175A286F271900526F25 /* AppDelegate.swift */; };
@@ -22,7 +21,6 @@
 
 /* Begin PBXFileReference section */
 		1A97BDBF287481C000D5D311 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1A97BDC12874887500D5D311 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		1A97BDC328749C1A00D5D311 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		1A97BDC528749C5B00D5D311 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		1AB51757286F271900526F25 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				1A97BDBF287481C000D5D311 /* User.swift */,
-				1A97BDC12874887500D5D311 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A97BDC22874887500D5D311 /* Person.swift in Sources */,
 				1A97BDC428749C1A00D5D311 /* UserInfoViewController.swift in Sources */,
 				1AB5175F286F271900526F25 /* LoginViewController.swift in Sources */,
 				1AB5176F286F2FAC00526F25 /* WelcomeViewController.swift in Sources */,

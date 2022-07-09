@@ -13,16 +13,14 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet weak var myanmarImageView: UIImageView!
     @IBOutlet weak var indiaImageView: UIImageView!
     
-    var indonesia = ""
-    var myanmar = ""
-    var india = ""
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupImageView(imageView: indonesiaImageView, image: indonesia)
-        setupImageView(imageView: myanmarImageView, image: myanmar)
-        setupImageView(imageView: indiaImageView, image: india)
+        setupImageView(imageView: indonesiaImageView, image: user.person.firstFavoriteСountrieImage)
+        setupImageView(imageView: myanmarImageView, image: user.person.secondFavoriteСountrieImage)
+        setupImageView(imageView: indiaImageView, image: user.person.thirdFavoriteСountrieImage)
     }
 
     private func setupImageView(imageView: UIImageView, image: String) {

@@ -14,8 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private let users = User.getUser()
-    
+    private let user = User.getUser()
     //MARK: - override methods
     
     override func viewDidLoad() {
@@ -36,16 +35,11 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = users.first?.person.fullname ?? ""
+                welcomeVC.user = user
             } else if let userInfoVC = viewController as? UserInfoViewController {
-                userInfoVC.imageName = users.first?.person.personImage ?? ""
-                userInfoVC.fullname = users.first?.person.fullname ?? "?"
-                userInfoVC.age = users.first?.person.age ?? "?"
-                userInfoVC.hobby = users.first?.person.hobby ?? "?"
+                userInfoVC.user = user
             } else if let moreInfoVC = viewController as? MoreInfoViewController {
-                moreInfoVC.indonesia = users.first?.person.firstFavoriteСountrieImage ?? ""
-                moreInfoVC.myanmar = users.first?.person.secondFavoriteСountrieImage ?? ""
-                moreInfoVC.india = users.first?.person.thirdFavoriteСountrieImage ?? ""
+                moreInfoVC.user = user
             }
         }
     }
@@ -58,7 +52,7 @@ class LoginViewController: UIViewController {
     // MARK: - IB actions
     
     @IBAction func logInButtonPressed() {
-        guard userNameTextField.text == users.first?.login, passwordTextField.text == users.first?.password else {
+        guard userNameTextField.text == user.login, passwordTextField.text == user.password else {
             setupAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
@@ -70,16 +64,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func remindNameButton() {
-        if let login = users.first?.login {
-            setupAlert(title: "Oops!", message: "Your name is \(login) 😉")
-        }
-        
+        setupAlert(title: "Oops!", message: "Your name is \(user.login) 😉")
     }
     
     @IBAction func remindPasswordButton() {
-        if let password = users.first?.password {
-            setupAlert(title: "Oops!", message: "Your password is \(password) 😉")
-        }
+        setupAlert(title: "Oops!", message: "Your password is \(user.password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
